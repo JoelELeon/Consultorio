@@ -1,30 +1,30 @@
 # Consultorio
 
-Sistema de escritorio para la gestión de un consultorio médico. Desarrollado en **Visual Basic .NET (WinForms)** sobre **.NET Framework 4.7.2** con **SQL Server** como base de datos.
+Desktop system for managing a medical office. Built with **Visual Basic .NET (WinForms)** on **.NET Framework 4.7.2** and **SQL Server** as the database.
 
-## Funcionalidades
+## Features
 
-- **Pacientes:** registrar, buscar, actualizar y eliminar pacientes. Incluye datos personales, seguro médico, plan médico, dirección (pueblo/calle/código postal), teléfono y género.
-- **Doctores:** registrar, buscar, actualizar y eliminar doctores, con su especialidad y horario de entrada/salida.
-- **Citas:** crear citas, reprogramarlas (cambiar fecha), buscarlas y listarlas. Relaciona pacientes con doctores y tipos de cita.
-- **Signos vitales:** registrar y consultar presión arterial, frecuencia cardíaca, peso, altura y temperatura por paciente y cita.
+- **Patients:** register, search, update, and delete patients. Includes personal data, health insurance, medical plan, address (town/street/zip code), phone, and gender.
+- **Doctors:** register, search, update, and delete doctors, including their specialty and working hours.
+- **Appointments:** create appointments, reschedule them (change date), search, and list them. Relates patients with doctors and appointment types.
+- **Vital signs:** record and view blood pressure, heart rate, weight, height, and temperature per patient and appointment.
 
-## Tecnologías
+## Technologies
 
 - Visual Basic .NET (WinForms)
 - .NET Framework 4.7.2
 - SQL Server (ADO.NET / System.Data.SqlClient)
-- Visual Studio 2017 o superior
+- Visual Studio 2017 or later
 
-## Base de datos
+## Database
 
-La aplicación se conecta a una base de datos `Consultorio` en SQL Server. La cadena de conexión se encuentra en `Consultorio/App.config`:
+The application connects to a `Consultorio` database in SQL Server. The connection string is located in `Consultorio/App.config`:
 
 ```
 Data Source=JOEL\JLEON;Initial Catalog=Consultorio;Integrated Security=True;TrustServerCertificate=True
 ```
 
-### Tablas principales
+### Main tables
 
 - `Pacientes`
 - `Doctor`
@@ -34,24 +34,24 @@ Data Source=JOEL\JLEON;Initial Catalog=Consultorio;Integrated Security=True;Trus
 - `PlanesMedicos`
 - `Pueblos`
 
-> Ajusta la cadena de conexión (`Data Source`) al nombre de tu servidor SQL antes de ejecutar la aplicación.
+> Adjust the connection string (`Data Source`) to your SQL Server name before running the application.
 
-## Requisitos previos
+## Prerequisites
 
 - Windows
-- Visual Studio 2017 o superior (con la carga de trabajo "Desarrollo de escritorio con .NET")
-- SQL Server con la base de datos `Consultorio` creada y las tablas definidas
+- Visual Studio 2017 or later (with the ".NET desktop development" workload)
+- SQL Server with the `Consultorio` database created and its tables defined
 
-## Cómo ejecutar
+## How to run
 
-1. Clona el repositorio:
+1. Clone the repository:
 
    ```
    git clone https://github.com/JoelELeon/Consultorio.git
    ```
 
-2. Abre la solución `Consultorio.sln` en Visual Studio.
+2. Open the `Consultorio.sln` solution in Visual Studio.
 
-3. Crea la base de datos `Consultorio` en tu instancia de SQL Server y verifica/actualiza la cadena de conexión en `Consultorio/App.config`.
+3. Create the `Consultorio` database in your SQL Server instance and verify/update the connection string in `Consultorio/App.config`.
 
-4. Compila y ejecuta (F5). La ventana principal muestra los accesos a **Citas**, **Pacientes** y **Doctores**.
+4. Build and run (F5). The main window shows access to **Appointments**, **Patients**, and **Doctors**.
